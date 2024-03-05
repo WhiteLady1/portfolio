@@ -1,6 +1,6 @@
+import { ProjectData } from "@/app/services";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { ProjectData } from "..";
-import { Avatar, Chip, ScrollShadow, User } from "@nextui-org/react";
+import { Avatar, Chip, ScrollShadow } from "@nextui-org/react";
 
 interface ProjectsCarouselProps {
   items: ProjectData[];
@@ -22,7 +22,7 @@ export const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({
             <ul className="flex gap-1 m-1">
               {item.technologies.map((technology, index) => (
                 <li key={index}>
-                  <Chip color="warning" size="sm">{technology}</Chip>
+                  <Chip color="warning" size="sm">{technology.name}</Chip>
                 </li>
               ))}
             </ul>
