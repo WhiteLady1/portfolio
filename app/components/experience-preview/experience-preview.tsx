@@ -14,15 +14,15 @@ export const ExperiencePreview: React.FC<ExperiencePreviewProps> = ({
   };
 
   return (
-    <Card shadow="none" className="pt-0">
-      <CardBody className="flex flex-row gap-3 text-xs overflow-hidden">
-        <span>
+    <Card shadow="none" className="pt-0 bg-[#FEC8C6]">
+      <CardBody className="flex flex-row items-center justify-between gap-3 text-[10px] text-[#DC2D4E] overflow-hidden">
+        <span className="w-3/6">
           <p className="text-2xl">{countOfProject}</p>
-          <p>Client projects</p>
+          <p className=" leading-none">Clients projects</p>
         </span>
-        <span>
+        <span className="w-3/6">
           <p className="text-2xl">{getYaersOfExperiences()}</p>
-          <p>Years of experience</p>
+          <p  className=" leading-none">Years of experience</p>
         </span>
       </CardBody>
     </Card>

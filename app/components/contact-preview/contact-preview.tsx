@@ -44,18 +44,17 @@ export const ContactPreview:React.FC<ContactProps> = ({
   return (
     <>
       <Card
-        className='col-start-2 row-start-3 row-end-5 text-emerald-950 bg-background/60'
+        className='col-start-2 row-start-3 row-end-5 text-emerald-950'
         shadow='none'
-        isBlurred
       >
         <CardBody className='flex flex-row gap-2 flex-wrap content-center'>
-          <Button href={linkedin} isIconOnly as={Link} color='primary'>
+          <Button href={linkedin} isIconOnly as={Link} className="text-white bg-[#3F8A40]">
             <LinkedinIcon filled width={24} height={24} label="Linkedin Blanka Semanová" />
           </Button>
-          <Button href={github} isIconOnly as={Link} color='secondary'>
+          <Button href={github} isIconOnly as={Link} className="text-white bg-[#3F8A40]">
             <GithubIcon filled width={24} height={24} label="Github Blanka Semanová" />
           </Button>
-          <Button isIconOnly color='danger' onPress={() => copyToClipboard(email)}>
+          <Button isIconOnly className="text-white bg-[#3F8A40]" onPress={() => copyToClipboard(email)}>
             <GmailIcon filled width={24} height={24} label="Gmail Blanka Semanová" />
           </Button>
         </CardBody>

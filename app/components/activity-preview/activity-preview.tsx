@@ -30,9 +30,8 @@ export const ActivityPreview: React.FC<ActivityProps> = ({
 
   return (
     <Card
-      className='col-start-2 row-start-1 row-end-3 text-white bg-background/60'
+      className='col-start-2 row-start-1 row-end-3 text-white'
       shadow='none'
-      isBlurred
     >
       <CardBody className='relative flex overflow-hidden'>
         <ul className='z-10 [&>*:nth-child(3n)]:text-right [&>*:nth-child(3n+2)]:text-center [&>*:nth-child(3n+1)]:text-left'>
