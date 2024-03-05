@@ -19,10 +19,10 @@ export const AboutMePreview: React.FC<AboutMePreviewProps> = ({
 }) => {
   return (
     <Card
-      className='col-start-1 row-start-1 row-end-5 flex justify-between pt-2 w-full text-emerald-950'
+      className='col-start-1 row-start-1 row-end-5 flex justify-between w-full text-emerald-950'
       shadow='none'
     >
-      <CardHeader className="flex flex-col justify-end items-start">
+      <CardHeader className="flex flex-col justify-end items-start h-3/6 pb-0">
         <p className="text-2xl font-semibold text-[#DC2D4E]">{name}</p>
         <p className="text-xs text-[#F9506D]">{moto}</p>
         {description && (
@@ -30,7 +30,7 @@ export const AboutMePreview: React.FC<AboutMePreviewProps> = ({
           )
         }
       </CardHeader>
-      <CardBody className='relative'>
+      <CardBody className='relative h-3/6'>
         {/* <Image
           className="object-cover"
           src={imageUrl}
