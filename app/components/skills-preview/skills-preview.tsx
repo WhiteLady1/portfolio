@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 export interface SkillData {
   name: string;
-  description: string;
+  description?: string;
 }
 
 interface SkillsData {
