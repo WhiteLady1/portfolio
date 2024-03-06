@@ -14,8 +14,8 @@ export const ExperiencePreview: React.FC<ExperiencePreviewProps> = ({
   };
 
   return (
-    <Card shadow="none" className="pt-0 bg-[#FEC8C6]">
-      <CardBody className="flex flex-row items-center justify-between gap-3 text-[10px] text-[#DC2D4E] overflow-hidden">
+    <Card shadow="none" className="pt-0 h-full bg-[--background-experience]">
+      <CardBody className="flex flex-row items-center justify-between gap-3 text-[10px] text-[--text-experience] overflow-hidden">
         <span className="w-3/6">
           <p className="text-2xl">{countOfProject}</p>
           <p className=" leading-none">Clients projects</p>

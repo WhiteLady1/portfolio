@@ -19,12 +19,12 @@ export const AboutMePreview: React.FC<AboutMePreviewProps> = ({
 }) => {
   return (
     <Card
-      className='col-start-1 row-start-1 row-end-5 flex justify-between w-full text-emerald-950'
+      className='col-start-1 row-start-1 row-end-5 flex justify-evenly w-full bg-[--background-card]'
       shadow='none'
     >
-      <CardHeader className="flex flex-col justify-end items-start h-3/6 pb-0">
-        <p className="text-2xl font-semibold text-[#DC2D4E]">{name}</p>
-        <p className="text-xs text-[#F9506D]">{moto}</p>
+      <CardHeader className="flex flex-col justify-center items-start h-3/6 pb-0">
+        <p className="text-2xl font-semibold text-[--main-title]">{name}</p>
+        <p className="text-xs text-[--subtitle]">{moto}</p>
         {description && (
           <div>{documentToReactComponents(description)}</div>
           )

@@ -30,21 +30,24 @@ export const ActivityPreview: React.FC<ActivityProps> = ({
 
   return (
     <Card
-      className='col-start-2 row-start-1 row-end-3 text-white'
+      className='col-start-2 row-start-1 row-end-4 text-[--text-contrast] bg-[--background-card]'
       shadow='none'
     >
-      <CardBody className='relative flex overflow-hidden'>
-        <ul className='z-10 [&>*:nth-child(3n)]:text-right [&>*:nth-child(3n+2)]:text-center [&>*:nth-child(3n+1)]:text-left'>
+      <CardBody className='relative flex justify-center overflow-hidden'>
+        <ul className='flex flex-col justify-evenly z-10 h-full [&>*:nth-child(3n)]:text-right [&>*:nth-child(3n+2)]:text-center [&>*:nth-child(3n+1)]:text-left'>
           {activityData.map((activity, index) => (
-            <li key={index}>{activity.name}</li>
+            <li key={index}>
+              <p>{activity.name}</p>
+            </li>
           ))}
         </ul>
         {activityData.map((activity, index) => (
           <span
             key={index}
-            className={`absolute top-0 left-0 contrast-50  ${index===currentImage ? ' translate-x-0' : '-translate-y-full'} ease-out duration-700`}
+            className={`absolute flex top-0 left-0 contrast-50 h-full ${index===currentImage ? ' translate-x-0' : '-translate-y-full'} ease-out duration-700`}
           >
             <Image
+              className=" object-cover"
               key={index}
               src={activity.imageUrl}
               width={200}

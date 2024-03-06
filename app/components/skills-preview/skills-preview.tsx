@@ -62,7 +62,7 @@ export const SkillsPreview: React.FC<SkillsData> = ({
         </Card>
       ) : (
         <Card
-          className='col-span-2 row-start-5 w-full p-0'
+          className='col-span-2 row-start-5 w-full p-0 bg-[--background-card]'
           shadow='none'
         >
           <CardBody
@@ -77,7 +77,7 @@ export const SkillsPreview: React.FC<SkillsData> = ({
             >
               {allSkills.map((skill, index) => (
                 <li key={index}>
-                  <Chip className="bg-[#F9506D] text-white" size="lg">{skill.name}</Chip>
+                  <Chip className="bg-[--background-chip] text-[--text-contrast]" size="lg">{skill.name}</Chip>
                 </li>
               ))}
             </motion.ul>

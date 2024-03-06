@@ -2,6 +2,125 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme No.1*/
+/* :root {
+  --background: #faebd7;
+  --background-chip: #F9506D;
+  --background-flag: #84B130;
+  --background-card: white;
+  --background-experience: #FEC8C6;
+
+  --contact-icons: #3F8A40;
+
+  --main-title: #DC2D4E;
+  --subtitle: #F9506D;
+  --text: black;
+  --text-contrast: white;
+  --text-flag: white;
+  --text-experience: #DC2D4E;
+
+  --success: #3F8A40;
+  --warning: #DC2D4E;
+  --primary: #F9506D;
+  --secondery: #84B130;
+} */
+
+/* Theme No.2 */
+/* :root {
+  --background: #5C4B51;
+  --background-chip: #F06060;
+  --background-flag: #F3B562;
+  --background-card: #fdfdfd;
+  --background-experience: #F3B562;
+
+  --contact-icons: #8CBEB2;
+
+  --main-title: #F06060;
+  --subtitle: #F06060;
+  --text: black;
+  --text-contrast: #fdfdfd;
+  --text-flag: #5C4B51;
+  --text-experience: #5C4B51;
+
+  --warning: #F06060;
+  --success: #8CBEB2;
+  --background: #5C4B51;
+  --primary: #F3B562;
+  --secondery: #F2EBBF;
+} */
+
+/* Theme No.3 */
+:root {
+  --background: #F2EFDF;
+  --background-chip: #D94141;
+  --background-flag: #F2EFDF;
+  --background-card: #fdfdfd;
+  --background-experience: #F2EFDF;
+
+  --contact-icons: #03A6A6;
+
+  --main-title: #03A6A6;
+  --subtitle: #03A6A6;
+  --text: black;
+  --text-contrast: #fdfdfd;
+  --text-flag: #D94141;
+  --text-experience: #D94141;
+
+  --warning: #D94141;
+  --success: #03A6A6;
+  --background-1: #F2EFDF;
+  --primary: #F2B05E;
+  --secondery: #F29985;
+}
+
+/* Theme No.4 night */
+/* :root {
+  --background: #011F26;
+  --background-chip: #8C0335;
+  --background-flag: #011F26;
+  --background-card: #3d3d3d;
+  --background-experience: #011F26;
+
+  --contact-icons: #8C0335;
+
+  --main-title: #ebdbd8;
+  --subtitle: #ebdbd8;
+  --text: #ebdbd8;
+  --text-contrast: #ebdbd8;
+  --text-flag: #ebdbd8;
+  --text-experience: #ebdbd8;
+
+  --warning: #F24464;
+  --success: #014040;
+  --background-1: #011F26;
+  --primary: #8C0335;
+  --secondery: #F28972;
+} */
+
+/* Theme No.5 */
+/* :root {
+  --background: #C2F2CE;
+  --background-chip: #A60303;
+  --background-flag: #C2F2CE;
+  --background-card: #03A688;
+  --background-experience: #C2F2CE;
+
+  --contact-icons: #014040;
+
+  --main-title: #014040;
+  --subtitle: #C2F2CE;
+  --text: #C2F2CE;
+  --text-contrast: #C2F2CE;
+  --text-flag: #A60303;
+  --text-experience: #A60303;
+
+  --warning: #F24464;
+  --success: #014040;
+  --background-1: #011F26;
+  --primary: #8C0335;
+  --secondery: #F28972;
+} */
+
 /* :root {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 255, 255, 255;
