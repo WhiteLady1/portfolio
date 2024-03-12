@@ -50,8 +50,8 @@ export const ActivityPreview: React.FC<ActivityProps> = ({
               className=" object-cover"
               key={index}
               src={activity.imageUrl}
-              width={200}
-              height={200}
+              width={300}
+              height={300}
               alt={`Picture from activity ${activity.name}`}
             />
           </span>

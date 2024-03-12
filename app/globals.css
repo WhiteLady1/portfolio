@@ -26,7 +26,7 @@
 } */
 
 /* Theme No.2 */
-/* :root {
+:root {
   --background: #5C4B51;
   --background-chip: #F06060;
   --background-flag: #F3B562;
@@ -47,10 +47,10 @@
   --background: #5C4B51;
   --primary: #F3B562;
   --secondery: #F2EBBF;
-} */
+}
 
 /* Theme No.3 */
-:root {
+/* :root {
   --background: #F2EFDF;
   --background-chip: #D94141;
   --background-flag: #F2EFDF;
@@ -71,7 +71,7 @@
   --background-1: #F2EFDF;
   --primary: #F2B05E;
   --secondery: #F29985;
-}
+} */
 
 /* Theme No.4 night */
 /* :root {
