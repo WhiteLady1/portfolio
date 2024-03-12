@@ -2,7 +2,7 @@ import { Entry, EntryFieldTypes, createClient } from "contentful";
 import { AboutMePreview, ActivityPreview, ContactPreview, ExperiencePreview, ProjectsPreview, SkillsPreview } from "./components";
 import { AboutMeData, ActivityData, ContactData, SkillsData } from "./services";
 import { SelectedProjectsData } from "./services/projects";
-import { Card, CardBody } from "@nextui-org/react";
+import { Card, CardBody, ScrollShadow } from "@nextui-org/react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 export default async function Root() {
@@ -38,17 +38,19 @@ export default async function Root() {
         github={contactData.github}
         email={contactData.email}
       />
-      <span className="hidden sm:block sm:row-start-1 sm:row-end-5">
+      <span className="hidden sm:block sm:row-start-1 sm:row-end-3">
         <ExperiencePreview countOfProject={projectsData.data.length} />
       </span>
-      <span className="hidden sm:block sm:col-span-3 sm:row-start-10 sm:row-end-18 md:row-end-11">
+      <span className="hidden sm:flex sm:col-span-3 sm:row-start-6 sm:row-end-10">
         <Card className="p-2 text-[--text-experience]">
-          <CardBody className="">
-            <h3 className="text-xl pb-3">About me</h3>
-            {aboutMeData.description && (
-              <div>{documentToReactComponents(aboutMeData.description)}</div>
-              )
-            }
+          <CardBody>
+            <ScrollShadow size={100} hideScrollBar className="pb-10">
+              <h3 className="text-xl pb-3">About me</h3>
+              {aboutMeData.description && (
+                <div className="text-sm">{documentToReactComponents(aboutMeData.description)}</div>
+                )
+              }
+            </ScrollShadow>
           </CardBody>
         </Card>
       </span>
