@@ -42,6 +42,8 @@
   --text-flag: #5C4B51;
   --text-experience: #5C4B51;
 
+  --bento-border: #3b2f33;
+
   --warning: #F06060;
   --success: #8CBEB2;
   --background: #5C4B51;
@@ -134,17 +136,17 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+*/
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @media screen and (min-width: 950px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: var(--background); */
+  }
 }
-
+/*
 @layer utilities {
   .text-balance {
     text-wrap: balance;

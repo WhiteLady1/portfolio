@@ -62,7 +62,7 @@ export const SkillsPreview: React.FC<SkillsData> = ({
         </Card>
       ) : (
         <Card
-          className='col-span-2 row-start-5 w-full p-0 bg-[--background-card]'
+          className='col-span-2 sm:col-span-3 row-start-5 w-full p-0 bg-[--background-card] h-[50px]'
           shadow='none'
         >
           <CardBody
