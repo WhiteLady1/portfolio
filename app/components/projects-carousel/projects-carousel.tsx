@@ -33,7 +33,7 @@ export const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({
               <ul className="flex gap-1 mt-1 sm:mt-2">
                 {item.colleagues.map((colleague, index) => (
                   <li key={index}>
-                    <Avatar showFallback name={colleague?.name} className="text-[--text-contrast] bg-[--contact-icons]" />
+                    <Avatar showFallback name={colleague?.name} className="text-[--text-contrast] bg-[--success]" />
                   </li>
                 ))}
               </ul>

@@ -5,7 +5,7 @@ import { NextUIProvider } from '@nextui-org/react';
 export const LayoutProvider = ({children}: { children: React.ReactNode }) => {
   return (
     <NextUIProvider>
-      <main className='grid grid-cols-2 sm:grid-cols-6 sm:grid-rows-9 gap-1 sm:gap-2 h-screen sm:h-[750px] md:w-[900px] p-5 bg-[--background] md:rounded-2xl md:border-5 md:border-[--bento-border]'>
+      <main className='grid grid-cols-2 sm:grid-cols-6 sm:grid-rows-9 gap-1 sm:gap-2 h-screen sm:h-[650px] md:w-[750px] p-5 bg-[--background]'>
         {children}
       </main>
     </NextUIProvider>
