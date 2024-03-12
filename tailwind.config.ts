@@ -25,7 +25,7 @@ const config: Config = {
         "running-carousel": "slide 10s linear infinite",
       },
       screens: {
-        'sm': '500px'
+        'md': '950px'
       }
     },
   },
