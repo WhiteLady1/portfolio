@@ -138,12 +138,12 @@
 }
 */
 body {
-  @media screen and (min-width: 950px) {
+  @media screen and (min-width: 640px) {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* background-color: var(--background); */
+    background-color: var(--background);
   }
 }
 /*
