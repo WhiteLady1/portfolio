@@ -31,14 +31,16 @@
   --background-chip: #F06060;
   --background-flag: #F3B562;
   --background-card: #fdfdfd;
+  --background-contact: #8CBEB2;
   --background-experience: #F3B562;
 
-  --contact-icons: #8CBEB2;
+  --contact-icons: #fdfdfd;
 
   --main-title: #F06060;
   --subtitle: #F06060;
   --text: black;
   --text-contrast: #fdfdfd;
+  --text-contact: #8CBEB2;
   --text-flag: #5C4B51;
   --text-experience: #5C4B51;
 
