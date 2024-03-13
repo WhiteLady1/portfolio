@@ -44,18 +44,18 @@ export const ContactPreview:React.FC<ContactProps> = ({
   return (
     <>
       <Card
-        className='col-start-2 sm:col-start-1 row-start-4 row-end-5 sm:row-end-6 p-0 bg-[--background-contact]'
+        className='col-start-2 sm:col-start-1 row-start-4 row-end-5 sm:row-end-6 p-0 bg-transparent sm:bg-[--background-contact]'
         shadow='none'
       >
         <CardBody className='flex flex-row sm:flex-col flex-nowrap justify-evenly items-center p-0'>
-          <Button href={linkedin} isIconOnly as={Link} size="md" className="text-[--text-contact] bg-[--contact-icons]">
-            <LinkedinIcon filled width={24} height={24} label="Linkedin Blanka Semanová" />
+          <Button href={linkedin} isIconOnly as={Link} size="sm" className="text-[--text-contact] bg-[--contact-icons]">
+            <LinkedinIcon filled width={20} height={20} label="Linkedin Blanka Semanová" />
           </Button>
-          <Button href={github} isIconOnly as={Link} size="md" className="text-[--text-contact] bg-[--contact-icons]">
-            <GithubIcon filled width={24} height={24} label="Github Blanka Semanová" />
+          <Button href={github} isIconOnly as={Link} size="sm" className="text-[--text-contact] bg-[--contact-icons]">
+            <GithubIcon filled width={20} height={20} label="Github Blanka Semanová" />
           </Button>
-          <Button isIconOnly size="md" className="text-[--text-contact] bg-[--contact-icons]" onPress={() => copyToClipboard(email)}>
-            <GmailIcon filled width={24} height={24} label="Gmail Blanka Semanová" />
+          <Button isIconOnly size="sm" className="text-[--text-contact] bg-[--contact-icons]" onPress={() => copyToClipboard(email)}>
+            <GmailIcon filled width={20} height={20} label="Gmail Blanka Semanová" />
           </Button>
         </CardBody>
       </Card>
