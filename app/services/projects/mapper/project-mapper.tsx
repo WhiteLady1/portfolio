@@ -14,7 +14,7 @@ export class ProjectMapper {
     type: data.fields.type,
     imageUrl: (data.fields.image ? `https:${(data.fields.image as Asset).fields.file?.url}`: null),
     technologies: (data.fields.technologies as Entry<TechnologySkeleton, undefined, string>[]).map(TechnologyMapper.map),
-    colleagues: (data.fields.colleagues as Entry<ColleagueSkeleton, undefined, string>[]).map(ColleagueMapper.map),
+    colleagues: data.fields.colleagues ? (data.fields.colleagues as Entry<ColleagueSkeleton, undefined, string>[]).map(ColleagueMapper.map) : null,
     projectStart: data.fields.projectStart,
     projectEnd: data.fields.projectEnd
   });
