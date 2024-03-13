@@ -8,14 +8,14 @@ interface AboutMePreviewProps {
   name: string;
   moto: string;
   description?: Document;
-  imageUrl: string; 
+  countOfProject?: number;
 }
 
 export const AboutMePreview: React.FC<AboutMePreviewProps> = ({
   name,
   moto,
   description,
-  imageUrl
+  countOfProject
 }) => {
   return (
     <Card
@@ -31,7 +31,7 @@ export const AboutMePreview: React.FC<AboutMePreviewProps> = ({
         }
       </CardHeader>
       <CardBody className='relative h-3/6 sm:hidden'>
-        <ExperiencePreview countOfProject={5} />
+        <ExperiencePreview countOfProject={countOfProject || 0} />
       </CardBody>
     </Card>
   );

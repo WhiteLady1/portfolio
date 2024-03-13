@@ -18,12 +18,16 @@ export default async function Root() {
   const skillsData: SkillsData = await skillsFacade.getSkillsData();
   const projectsData: SelectedProjectsData = await projectsFacade.getProjectsData();
 
+  const getCountOfWorkProject = () => {
+    return projectsData.data.filter(project => project.type === 'Work project').length
+  };
+
   return (
     <>
       <AboutMePreview
         name={aboutMeData.name}
         moto={aboutMeData.moto}
-        imageUrl={aboutMeData.imageUrl}
+        countOfProject={getCountOfWorkProject()}
       />
       <ProjectsPreview
         data={projectsData.data}
@@ -39,7 +43,7 @@ export default async function Root() {
         email={contactData.email}
       />
       <span className="hidden sm:block sm:row-start-1 sm:row-end-3">
-        <ExperiencePreview countOfProject={projectsData.data.length} />
+        <ExperiencePreview countOfProject={getCountOfWorkProject()} />
       </span>
       <span className="hidden sm:flex sm:col-span-3 sm:row-start-6 sm:row-end-10">
         <Card className="p-2 text-[--text-experience]">

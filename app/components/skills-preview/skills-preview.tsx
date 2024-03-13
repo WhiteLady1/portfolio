@@ -2,6 +2,7 @@
 import { Card, CardBody, Chip } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { Modal } from "..";
 
 export interface SkillData {
   name: string;
@@ -11,19 +12,28 @@ export interface SkillData {
 interface SkillsData {
   softskills: SkillData[];
   hardskills: SkillData[];
-  showDetail?: boolean;
 };
 
 export const SkillsPreview: React.FC<SkillsData> = ({
   softskills,
   hardskills,
-  showDetail = false
 }) => {
   const [lengtOfAnimation, setLengthOfAnimation] = useState(0);
+  const [durationOfAnimantion, setDurationOfAnimation] = useState(25);
+  const [showModal, setShowModal] = useState(false);
+
   const GAP = 8;
   const allSkills = [...softskills, ...hardskills].sort((a, b) => (a.name > b.name) ? 1 : -1);
 
   const ref = useRef<HTMLUListElement>(null);
+
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
+
+  const handelCloseModal = () => {
+    setShowModal(false);
+  };
 
   useEffect(() => {
     const getCoutOfElements = (): number => {
@@ -40,30 +50,21 @@ export const SkillsPreview: React.FC<SkillsData> = ({
       } else return 1;
     };
 
+    const getDurationOfAnimation = (): number => {
+      return allSkills.length * 3;
+    };
+
     setLengthOfAnimation(getCoutOfElements());
-  }, []);
+    setDurationOfAnimation(getDurationOfAnimation());
+  }, [allSkills]);
 
   return (
     <>
-      {showDetail ? (
-        <Card>
-          <CardBody>
-            <ul>
-                {softskills.map((skill, index) => (
-                <li key={index}>{skill.name}</li>
-              ))}
-              </ul>
-            <ul>
-              {hardskills.map((skill, index) => (
-                <li key={index}>{skill.name}</li>
-              ))}
-            </ul>
-          </CardBody>
-        </Card>
-      ) : (
         <Card
           className='col-span-2 sm:col-span-3 row-start-5 sm:row-start-3 w-full p-0 bg-[--background-card]'
           shadow='none'
+          isPressable
+          onPress={handleOpenModal}
         >
           <CardBody
             className="flex justify-center"
@@ -72,7 +73,7 @@ export const SkillsPreview: React.FC<SkillsData> = ({
             <motion.ul
               ref={ref}
               animate={{ x: [0, lengtOfAnimation, 0] }}
-              transition={{ ease: "easeInOut", duration: 25, repeat: Infinity }}
+              transition={{ ease: "easeInOut", duration: durationOfAnimantion, repeat: Infinity }}
               className="relative flex gap-2"
             >
               {allSkills.map((skill, index) => (
@@ -83,7 +84,26 @@ export const SkillsPreview: React.FC<SkillsData> = ({
             </motion.ul>
           </CardBody>
         </Card>
-      )}
+      <Modal isOpen={showModal} onClose={handelCloseModal}>
+        <div className="flex justify-between gap-2">
+          <div className="w-3/6">
+            <p className="text-lg">Hardskills</p>
+            <ul className="text-sm">
+              {hardskills.sort((a, b) => (a.name > b.name) ? 1 : -1).map((skill, index) => (
+                <li key={index}>{skill.name}</li>
+              ))}
+            </ul>
+          </div>
+          <div  className="w-3/6">
+            <p className="text-lg">Softskills</p>
+            <ul  className="text-sm">
+                {softskills.sort((a, b) => (a.name > b.name) ? 1 : -1).map((skill, index) => (
+                  <li key={index}>{skill.name}</li>
+                ))}
+            </ul>
+          </div>
+        </div>
+      </Modal>
     </>
   );
 };
