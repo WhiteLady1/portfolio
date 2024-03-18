@@ -25,7 +25,7 @@ export const ProjectsPreview:React.FC<ProjectsPreviewProps> = ({
   return (
     <>
     <Card
-      className='col-span-2 row-start-6 row-end-13 sm:col-start-4 sm:col-end-7 sm:row-start-1 sm:row-end-10 flex-grow w-full bg-[--background-card] text-[--text] sm:p-1'
+      className='col-span-2 row-start-6 row-end-13 sm:col-start-4 sm:col-end-7 sm:row-start-1 sm:row-end-10 flex-grow w-full h-[650px] sm:h-full bg-[--background-card] text-[--text] sm:p-1'
       shadow='none'
     >
       <CardBody className="text-[--text-experience]">
