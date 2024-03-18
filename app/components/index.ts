@@ -7,3 +7,4 @@ export * from './modal-component';
 export * from './projects-carousel';
 export * from './projects-preview';
 export * from './skills-preview';
+export * from './youtube-embed';
