@@ -44,15 +44,14 @@ export const ActivityPreview: React.FC<ActivityProps> = ({
         {activityData.map((activity, index) => (
           <span
             key={index}
-            className={`absolute flex top-0 left-0 contrast-50 h-full ${index===currentImage ? ' translate-x-0' : '-translate-y-full'} ease-out duration-700`}
+            className={`absolute flex top-0 left-0 contrast-50 w-full h-full ${index===currentImage ? ' translate-x-0' : '-translate-y-full'} ease-out duration-700`}
           >
             <Image
               className="object-cover"
               key={index}
               src={activity.imageUrl}
-              width={300}
-              height={300}
               alt={`Picture from activity ${activity.name}`}
+              fill
             />
           </span>
         ))}
