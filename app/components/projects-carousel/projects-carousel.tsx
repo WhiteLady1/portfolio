@@ -35,7 +35,7 @@ export const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({
           <li key={item.slug} className="relative pl-12 mb-6 sm:mb-8 before:block before:absolute before:top-5 before:left-4 before:bg-[--background-flag] before:w-[2px] before:h-full before:rounded-2xl">
             <span className="flex">
               <h3 className="text-lg sm:text-xl">{item.title}</h3>
-              <p className={`h-4 px-1 ml-1 text-nowrap text-[10px] text-right ${getTypeofProjectClass(item.type as TypeOfProject)}`}>{item.type}</p>
+              <p className={`h-4 px-1 ml-1 text-nowrap whitespace-nowrap text-[10px] text-right ${getTypeofProjectClass(item.type as TypeOfProject)}`}>{item.type}</p>
             </span>
             <p className="text-[10px]">{item.client}</p>
             <p className="absolute top-1 left-0 w-12 pb-1 text-[8px] bg-[--background-card]">{item.projectStart}</p>
