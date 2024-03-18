@@ -51,7 +51,7 @@ export const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({
               <ul className="flex gap-1 mt-1 sm:mt-2">
                 {item.colleagues.map((colleague, index) => (
                   <li key={index}>
-                    <Avatar showFallback name={colleague?.name} className="text-[--text-contrast] bg-[--success]" onClick={() => handleShowModal(colleague)} />
+                    <Avatar showFallback src={colleague?.imageUrl || undefined} name={colleague?.name} className="text-[--text-contrast] bg-[--success] sm:cursor-pointer" onClick={() => handleShowModal(colleague)} />
                   </li>
                 ))}
               </ul>
