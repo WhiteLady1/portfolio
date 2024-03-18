@@ -37,7 +37,6 @@ export const ProjectsPreview:React.FC<ProjectsPreviewProps> = ({
     </Card>
     <Modal
       isOpen={showColleague? true : false}
-      // isOpen={true}
       linkText={showColleague?.linkedin ? 'Linkedn' : undefined}
       url={showColleague?.linkedin ? showColleague.linkedin : undefined}
       onClose={handleCloseModal}
