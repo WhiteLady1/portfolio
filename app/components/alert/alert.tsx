@@ -10,13 +10,15 @@ export const Alert: React.FC<AlertProps> = ({
   text,
   progress
 }) => (
-  <Card radius="none" className="absolute top-0 left-0 flex flex-col justify-between w-full h-[50px] bg-[--background-card] z-50">
-    <CardBody className=" flex flex-row gap-2">
-      <span className=" text-[#3F8A40]">
-        <InfoIcon width={24} height={24} label="Alert icon" />
-      </span>
-      <p>{text}</p>
-    </CardBody>
-    <Progress classNames={{ indicator: "bg-[#84B130]" }} size="sm" aria-label="Progress" value={progress} />
-  </Card>
+  <div className="absolute top-0 left-0 flex justify-center w-full">
+    <Card radius="none" className="flex flex-col w-full md:w-[710px] h-[50px] md:rounded-b-xl bg-[--background-card] text-[--text] z-50">
+      <CardBody className=" flex flex-row gap-2">
+        <span>
+          <InfoIcon width={24} height={24} label="Alert icon" />
+        </span>
+        <p>{text}</p>
+      </CardBody>
+      <Progress classNames={{ indicator: "!bg-[--success]" }} radius="none" size="sm" aria-label="Progress" value={progress} />
+    </Card>
+  </div>
 );

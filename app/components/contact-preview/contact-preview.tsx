@@ -4,7 +4,7 @@ import { LinkedinIcon } from "./linkedin-icon";
 import { GithubIcon } from "./github-icon";
 import { GmailIcon } from "./gmail-icon";
 import { useEffect, useState } from "react";
-import { Alert, Modal } from "..";
+import { Alert } from "..";
 
 interface ContactProps {
   linkedin: string;
@@ -28,12 +28,12 @@ export const ContactPreview:React.FC<ContactProps> = ({
   useEffect(() => {
     if (showAlert) {
       const progressInterval = setInterval(() => {
-        setAlertProgress(prevValue => prevValue + 17)
-      }, 1000);
+        setAlertProgress(prevValue => prevValue + 5)
+      }, 100);
       const alertTimeout = setTimeout(() => {
         setShowAlert(false);
         setAlertProgress(0);
-      }, 7000);
+      }, 3500);
       return () => {
         clearInterval(progressInterval);
         clearTimeout(alertTimeout);
