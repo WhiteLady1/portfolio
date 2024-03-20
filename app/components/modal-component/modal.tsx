@@ -31,7 +31,7 @@ export const Modal: React.FC<ModalProps> = ({
   return (
     <div className={`absolute top-0 left-0 flex justify-center items-center h-screen w-screen backdrop-blur-sm bg-zinc-600/50 ${isOpen ? 'visible' : 'hidden'} z-20`}>
       <Card
-        className={`${bigSize ? 'w-full m-[10px]' : 'w-[300px]'} ${bigSize && 'sm:w-[600px]'} ${bigSize ? 'h-[650px]' : 'h-[300px]'} p-2`}
+        className={`${bigSize ? 'w-full m-[30px]' : 'w-[300px]'} ${bigSize && 'sm:w-[600px]'} ${bigSize ? 'h-[550px] sm:h-[650px]' : 'h-[300px]'} p-2`}
       >
         <CardBody>
           {children}
