@@ -1,7 +1,8 @@
 'use client'
 
-import { Button, Card, CardBody, CardFooter, Link } from "@nextui-org/react";
+import { Button, Card, CardBody, CardFooter, CardHeader, Link } from "@nextui-org/react";
 import { useEffect } from "react";
+import { CloseIcon } from "./close-icon";
 
 interface ModalProps {
   linkText?: string;
@@ -29,10 +30,15 @@ export const Modal: React.FC<ModalProps> = ({
   }, [isOpen]);
 
   return (
-    <div className={`absolute top-0 left-0 flex h-screen w-screen backdrop-blur-sm bg-zinc-600/50 ${isOpen ? 'visible' : 'hidden'} z-20`}>
+    <div className={`absolute top-0 left-0 flex sm:justify-center sm:items-center h-screen w-screen backdrop-blur-sm bg-zinc-600/50 ${isOpen ? 'visible' : 'hidden'} z-20`}>
       <Card
         className={`${bigSize ? 'w-full m-[30px] mb-[50px]' : 'w-[300px]'} ${bigSize && 'sm:w-[600px]'} ${bigSize ? 'sm:h-[650px]' : 'h-[300px]'} p-2`}
       >
+        <CardHeader className="absolute top-0 right-0 justify-end">
+          <span onClick={onClose}>
+            <CloseIcon height={24} width={24} label="Close icon" />
+          </span>
+        </CardHeader>
         <CardBody>
           {children}
         </CardBody>
